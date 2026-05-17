@@ -1,6 +1,6 @@
-# Classical Machine Learning vs. Neural Network from Scratch: CKD Prediction
+# Classical ML vs. Neural Network from Scratch: CKD Prediction
 
-A graduate-level ML assignment comparing classical models and a from-scratch neural network for binary classification of Chronic Kidney Disease (CKD) using the UCI CKD dataset.
+An Introduction to Machine Learning assignment comparing classical models and a from-scratch neural network for binary classification of Chronic Kidney Disease (CKD) using the UCI CKD dataset.
 
 ## Overview
 
@@ -12,7 +12,8 @@ This notebook implements and compares three model families on the task of predic
 | Random Forest | RF-1, RF-2, RF-3 | n_estimators = {10, 100}, max_depth = {3, None, 5} |
 | Neural Network (NumPy) | Exp1, Exp2, Exp3 | lr = {0.01, 0.001}, hidden = {[64,32], [128,64]} |
 
-The neural network is a 3-layer feedforward network implemented **entirely in NumPy** (no PyTorch/TensorFlow/JAX) with:
+The neural network is a 3-layer feedforward network implemented entirely in NumPy (no PyTorch/TensorFlow/JAX) with:
+
 - ReLU hidden activations, sigmoid output
 - Binary cross-entropy loss with epsilon clipping
 - Analytically derived backpropagation gradients
@@ -23,7 +24,7 @@ The neural network is a 3-layer feedforward network implemented **entirely in Nu
 
 **Chronic Kidney Disease** — UCI Machine Learning Repository (ID: 336)
 
-> Soundarapandian, P., & Rubini, L. J. (2015). *Chronic kidney disease* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5G020
+Soundarapandian, P., & Rubini, L. J. (2015). *Chronic kidney disease* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5G020
 
 - 400 instances, 24 features (continuous + nominal), binary target
 - ~62.5% CKD / 37.5% not-CKD (mild imbalance)
@@ -32,30 +33,32 @@ The neural network is a 3-layer feedforward network implemented **entirely in Nu
 ## How to Run
 
 ### Google Colab (recommended)
-1. Upload `Assignment1_CKD_Analysis.ipynb` to Google Colab
-2. Fill in your name, course, and date in the title cell
-3. **Runtime > Run all**
+
+1. Upload `Assignment1_ElvinCyubahiro.ipynb` to Google Colab
+2. Runtime → Run all
 
 ### Local Jupyter
+
 ```bash
 pip install ucimlrepo scikit-learn matplotlib seaborn pandas numpy
-jupyter notebook Assignment1_CKD_Analysis.ipynb
+jupyter notebook Assignment1_ElvinCyubahiro.ipynb
 ```
 
-Then use **Kernel > Restart & Run All**.
+Then use Kernel → Restart & Run All.
 
 ## Notebook Structure
 
 | Section | Content |
 |---|---|
 | 1 | Library imports and environment setup |
-| 2 | Dataset selection and justification (academic prose) |
+| 2 | Dataset selection and justification |
 | 3 | Data loading, EDA (6-panel figure), preprocessing pipeline |
-| 4 | Classical ML: Logistic Regression (3 configs) + Random Forest (3 configs) with confusion matrices and feature importance |
-| 5 | Neural network from scratch: 8 NumPy functions, 3 experiments with learning curves, confusion matrices, and ROC curves |
-| 6 | Comparative analysis: results table, F1 bar chart, 5-paragraph discussion |
+| 4 | Classical ML: Logistic Regression (3 configs) + Random Forest (3 configs) with confusion matrices, ROC curves, PCA decision boundaries, and feature importance |
+| 5 | Neural network from scratch: 8 NumPy functions, 3 experiments with learning curves, confusion matrices, ROC curves, and PCA decision boundary |
+| 6 | Comparative analysis: results table, F1 bar chart, ROC overlay, discussion |
 | 7 | Conclusion |
 | 8 | APA references (17 sources) |
+| 9 | Academic integrity statement |
 
 ## Results
 
@@ -77,6 +80,6 @@ All models achieve strong performance on the CKD dataset, reflecting the high di
 
 ```
 Formative/
-  Assignment1_CKD_Analysis.ipynb   # Complete notebook (with executed outputs)
-  README.md                        # This file
+  Assignment1_ElvinCyubahiro.ipynb   # Complete notebook
+  README.md                          # This file
 ```
